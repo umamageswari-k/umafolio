@@ -1,0 +1,106 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<div class="card">
+		<img style="margin-left: 565px" ; src="/uma.jpg" alt="Uma Photo" />
+
+		<h2 style="margin-left: 500px" ;>Uma Mageswari K</h2>
+		<p style="margin-left: 415px" ;>
+			B.Tech IT Student at Sri Ramakrishna Engineering College.
+		</p>
+
+		<p>
+			Hi, I’m Uma, passionate about building practical and user-friendly
+			digital solutions. Skilled in Python, C, C++, Java, SQL, and UI/UX
+			tools, I focus on turning ideas into real, functional applications.
+			Winner of the SREC Domestic Hackathon 2.0 and an active CSI member,
+			I am committed to teamwork, creativity, and solving problems with
+			clarity and innovation.
+		</p>
+
+		<h3>Skills</h3>
+		<ul>
+			<li>Python</li>
+			<li>C</li>
+			<li>C++</li><li>Java</li><li>SQL</li><li>Figma</li>
+		</ul>
+
+		<h3>Contact</h3>
+		<div class="cont">
+			<a href="https://www.linkedin.com/in/uma-mageswari-176b74328">
+				<img src="/linked.png" alt="LinkedIn" class="icon" /></a
+			>
+			<a href="https://github.com/umamageswari-k">
+				<img src="/github.png" alt="GitHub" class="icons" /></a
+			>
+			<a
+				href="mailto:umamageswari14067@gmail.com"
+			>
+				<img src="/email.jpg" alt="Gmail" class="icon" /></a
+			>
+		</div>
+
+		<button id="changeTheme">Change Theme</button>
+	</div>
+	<script>
+		const button = document.getElementById("changeTheme") as HTMLElement;
+		button.addEventListener("click", (ev) => {
+			let colors = [
+				"lightyellow",
+				"lightgray",
+				"lightpink",
+				"lightgreen",
+				"lightgrey",
+			];
+			document.body.style.backgroundColor =
+				colors[Math.floor(Math.random() * colors.length)];
+		});
+	</script>
+</Layout>
+<style>
+	.card {
+		background: lightblue;
+		width: 1200px;
+		height: 700px;
+		margin: auto;
+		padding: 20px;
+		border-radius: 20px;
+	}
+	p {
+		margin-top: 50px;
+	}
+	img {
+		width: 70px;
+		height: 70px;
+		border-radius: 100px;
+	}
+	h3 {
+		margin-top: 50px;
+	}
+
+	button {
+		text-align: center;
+		padding: 10px 20px;
+		background: lightpink;
+		color: white;
+		border-radius: 20px;
+		cursor: pointer;
+		margin-top: 70px;
+		margin-left: 325px;
+	}
+	button:hover {
+		text-align: center;
+		background: gray;
+		text-align: center;
+	}
+
+	.cont {
+		display: inline-block;
+	}
+</style>
