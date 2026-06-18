@@ -1,0 +1,145 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<div class="card">
+
+<img src="/umafolio/uma.jpg" alt="Uma Photo" class="profile">
+
+<h1>Uma Mageswari K</h1>
+
+<h3>Aspiring Software Developer | B.Tech IT Student</h3>
+
+<p class="about">
+Hi, I’m Uma, passionate about building practical and user-friendly digital solutions.
+Skilled in Python, C, C++, Java, SQL, and UI/UX tools, I focus on turning ideas into
+real, functional applications. Winner of the SREC Domestic Hackathon 2.0 and an
+active CSI member.
+</p>
+
+<h3>Skills</h3>
+
+<div class="skills">
+<span>Python</span>
+<span>C</span>
+<span>C++</span>
+<span>Java</span>
+<span>SQL</span>
+<span>Figma</span>
+</div>
+
+<h3>Contact</h3>
+
+<div class="contact">
+<a href="https://www.linkedin.com/in/uma-mageswari-176b74328" target="_blank">
+<img src="/umafolio/linked.png" alt="LinkedIn" class="icon">
+</a>
+
+<a href="https://github.com/umamageswari-k" target="_blank">
+<img src="/umafolio/github.png" alt="GitHub" class="icon">
+</a>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=umamageswari14067@gmail.com" target="_blank">
+<img src="/umafolio/email.jpg" alt="Gmail" class="icon">
+</a>
+
+<a href="/UMA-Resume.pdf" target="_blank">
+<img src="/umafolio/resume.png" alt="Resume" class="icon">
+</a>
+</div>
+
+<button id="changeTheme">Switch Theme 🌙</button>
+
+<footer>
+© 2026 Uma Mageswari | Portfolio
+</footer>
+
+</div>
+
+		
+	<script>
+		const button = document.getElementById("changeTheme") as HTMLElement;
+		button.addEventListener("click", (ev) => {
+			let colors = [
+				"lightyellow",
+				"lightgray",
+				"lightpink",
+				"lightgreen",
+				"lightgrey",
+			];
+			document.body.style.backgroundColor =
+				colors[Math.floor(Math.random() * colors.length)];
+		});
+	</script>
+</Layout>
+<style>
+	.card{
+width:900px;
+margin:auto;
+text-align:center;
+background:lightblue;
+padding:40px;
+border-radius:20px;
+}
+
+.profile{
+width:150px;
+height:150px;
+border-radius:50%;
+}
+
+.about{
+margin-top:20px;
+line-height:1.6;
+}
+
+.skills{
+margin-top:20px;
+}
+
+.skills span{
+background:white;
+padding:8px 15px;
+border-radius:20px;
+margin:5px;
+display:inline-block;
+}
+
+.contact{
+margin-top:20px;
+}
+
+.contact a{
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+.icon{
+width:50px;
+height:50px;
+margin:10px;
+cursor:pointer;
+border-radius:20px;
+}
+.icon:hover{
+transform: scale(1.2);
+transition: 0.3s;
+}
+button{
+margin-top:30px;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+
+footer{
+margin-top:40px;
+font-size:14px;
+}
+</style>

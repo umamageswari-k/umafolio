@@ -1,0 +1,17 @@
+{
+  "name": "umafolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "astro": "^5.16.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
